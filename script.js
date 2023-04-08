@@ -35,4 +35,13 @@ async function getquotes () {
 //on load (run quote funztion as soon as the page loads)
 getquotes();
 
+//twitter botton quote (tweet quote)
+function tweetQuote() {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`; //template strings with ${placeholders}
+    window.open(twitterUrl, '_blank')  //allowa to open a window using urltwitter
+}
+
+//event listeners
+newQuoteBtn.addEventListener('click', newQuote); //new quote
+twitterBtn.addEventListener('click', tweetQuote); //twitterbtn
 
